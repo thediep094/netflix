@@ -1,0 +1,106 @@
+.navbar{
+    color: #fff;
+    font-size: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    //bottom to top have black linear gradient background
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0,0,0,0.09) 50%);
+    transition: all 0.3s ease-in-out;
+    &.scrolled{
+        background-color: var(--main-color);
+    }
+
+    .container {
+        display: flex;
+        padding: 5px 50px;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        .left{
+            display: flex;
+            align-items: center;
+            img{
+                height: 40px;
+                margin-right: 40px;
+            }
+
+            .btn-page{
+                    margin-right: 20px;
+                    cursor: pointer;
+                    color: white;
+                    text-decoration: none;
+    
+                    &:hover{
+                        color: red;
+                    }
+    
+                
+            }
+        }
+
+        .right{
+            display: flex;
+            align-items: center;
+
+            input{
+                border: none;
+                background-color: transparent;
+                color: #fff;
+                font-size: 15px;
+                padding: 0 10px;
+                outline: none;
+                border-bottom: 1px solid #fff;
+                transition: all 0.3s ease-in-out;
+                &:focus{
+                    border-bottom: 1px solid red;
+                }
+            }
+
+            img{
+                height: 30px;
+                height: 30px;
+                border-radius: 5px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            .icon{
+                margin: 0px 15px;
+                cursor: pointer;
+
+                &:hover{
+                    color: red;
+                }
+            }
+
+            .profile{
+                .options{
+                    display: none;
+                    background-color: var(--main-color);
+                    border-radius: 5px;
+                }
+
+                span{
+                    padding: 10px;
+                    cursor: pointer;
+                    .btn{
+                        color: white;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+
+                &:hover{
+                    .options{
+                        display: flex;
+                        position: absolute;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+}
